@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: warehouse-hide-seek
+    runtime: node
+    plan: free
+    buildCommand: pnpm install --frozen-lockfile && pnpm build
+    startCommand: pnpm start
+    envVars:
+      - key: NODE_ENV
+        value: production
